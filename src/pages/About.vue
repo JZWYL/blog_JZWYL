@@ -2,13 +2,13 @@
   <Layout>
      <!-- Page Header -->
     <header class="masthead" style="background-image: url('img/about-bg.jpg')">
-    <div class="overlay"></div>
+    <!-- <header class="masthead" > -->
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading">
-            <h1>About Me</h1>
-            <span class="subheading">This is what I do.</span>
+            <!-- <h1>About Me</h1>
+            <span class="subheading">This is what I do.</span> -->
           </div>
         </div>
       </div>
@@ -18,10 +18,33 @@
     <!-- Main Content -->
     <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!</p>
+      <!-- card卡片 信息介绍 -->
+      <div class="cardContent">
+        <el-card class="box-card" :body-style="{ padding: '0px' }">
+          <div class="xontent">
+            <span>兴趣爱好</span>
+            <p>模玩</p>
+          </div>
+        </el-card>
+        <el-card class="box-card" :body-style="{ padding: '0px' }">
+          <div class="xontent">
+            <span>我妻一善 || 鬼灭之刃</span>
+            <div>
+              品牌：<span>Banner</span>
+              价格： <span><i>￥</i>99</span>
+            </div>
+          </div>
+        </el-card>
+        <el-card class="box-card" :body-style="{ padding: '0px' }">
+          <div class="xontent">
+           
+            <span>我妻一善 || 鬼灭之刃</span>
+            <div>
+              品牌：<span>Banner</span>
+              价格： <span><i>￥</i>99</span>
+            </div>
+          </div>
+        </el-card>
       </div>
     </div>
     </div>
@@ -36,3 +59,19 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.cardContent {
+  width: 100%;
+  display: flex;
+  /* justify-items: center; */
+  /* justify-content: space-between; */
+  justify-content: space-around;
+}
+.box-card {
+  display: flex;
+  /* flex: 1; */
+  /* width: 270px; */
+  /* height: 150px; */
+}
+</style>

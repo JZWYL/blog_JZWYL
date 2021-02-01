@@ -5,7 +5,9 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: '假装文艺浪',
+  titleTemplate:'假装文艺浪',
+  siteDescription: '个人博客',   
   plugins: [
     {
       //读取本地文件，转化md

@@ -4,17 +4,15 @@
       <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
           <g-link class="navbar-brand" to="/">假装文艺浪</g-link>
-          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars"></i>
-          </button>
+          
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="index.html">模玩</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
+                <!-- <a class="nav-link" href="about.html">About</a> -->
+                <g-link class="nav-link" to="/about" >关于我</g-link>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="post.html">Sample Post</a>
@@ -72,5 +70,6 @@
 
 
 
-<style>
+<style scoped>
+
 </style>
