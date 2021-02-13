@@ -1,18 +1,6 @@
 <template>
   <Layout>
   <div class="container_1">
-    <!-- 标签框 -->
-    <div class="side">
-      <ul>
-        <li>JavaScript</li>
-        <li>海贼王</li>
-        <li>鬼灭之刃</li>
-        <li>一番赏</li>
-        <li>Vue</li>
-        <li>Node</li>
-        <li>HTML</li>
-      </ul>
-    </div>
     <!-- 轮播图 -->
     <div class="banner">
       <swiper ref="mySwiper" class="swiper" :options="swiperOption" >
@@ -20,14 +8,15 @@
           <g-link to="/about">
             <img :src="item.imgsrc" alt="">
           </g-link>
-        
-      </swiper-slide>
+        </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
         <div class="swiper-button-prev" slot="button-prev"></div>
         <div class="swiper-button-next" slot="button-next"></div>
       </swiper>
     </div>
+    <!-- 右侧边栏 -->
     <div class="side_Right">
+      <div></div>
       <ul>
         <li>JavaScript</li>
         <li>海贼王</li>
@@ -38,52 +27,51 @@
         <li>HTML</li>
       </ul>
     </div>
-    <!-- <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="post-preview" v-for="edge in $page.posts.edges" :key="edge.node.id">
-            <g-link :to="'/posts/'+ edge.node.id">
-              <h2 class="post-title">
-               {{edge.node.title}}
-              </h2>
-           
-            </g-link>
-            <p class="post-meta">Posted by
-              <a href="#">JZWYL</a>
-              {{ edge.node.created_at }}
-
-            </p>
-          </div>
-          <p>大萨达打算多 的</p>
-           <p>大萨达打算多 的</p>
-            <p>大萨达打算多 的</p>
-             <p>大萨达打算多 的</p>
-              <p>大萨达打算多 的</p>
-               <p>大萨达打算多 的</p>
-          <pager :info="$page.posts.pageInfo" />
-        </div>
-      </div>
-    </div> -->
-
   </div>
-  <div>
-    <p>最新文章</p>
-    <div class="newArticl">
-      <el-card>node的基本语法</el-card>
-      <el-card>JavaScript的数据类型</el-card>
-      <el-card>vue的事件应用</el-card>
-      <el-card>大萨达撒</el-card>
-      <el-card>GK是蛇魔</el-card>
-    </div>
-  </div>
-   <div>
+  <!-- 模玩模块 -->
+   <div class="Modu">
     <p>模玩动态</p>
-    <div class="newArticl">
-      <el-card>node的基本语法</el-card>
-      <el-card>JavaScript的数据类型</el-card>
-      <el-card>vue的事件应用</el-card>
-      <el-card>大萨达撒</el-card>
-      <el-card>GK是蛇魔</el-card>
+    <div class="newMo">
+      <el-card shadow="hover">
+        <g-link to="/about">
+          <img src="../assets/images/1.jpg" alt="">
+          <div class="M_container">
+            <p class="M_title">炭次郎的三大傻</p>
+            <p class="M_sapn">
+              <span>鬼灭之刃</span>
+              <span>眼镜蛇s</span>
+            </p>
+            <p class="M_time">  2020/2020</p>
+          </div>
+        </g-link>
+      </el-card>
+      <el-card shadow="hover">
+        <g-link>
+          <img src="../assets/images/1.jpg" alt="">
+          <div class="M_container">
+            <p class="M_title">炭次郎的三大傻</p>
+            <p class="M_sapn">
+              <span>鬼灭之刃</span>
+              <span>眼镜蛇s</span>
+            </p>
+            <p class="M_time">  2020/2020</p>
+          </div>
+        </g-link>
+      </el-card>
+       <el-card shadow="hover">
+        <g-link>
+          <img src="../assets/images/1.jpg" alt="">
+          <div class="M_container">
+            <p class="M_title">炭次郎的三大傻</p>
+            <p class="M_sapn">
+              <span>鬼灭之刃</span>
+              <span>眼镜蛇s</span>
+            </p>
+            <p class="M_time">  2020/2020</p>
+          </div>
+        </g-link>
+      </el-card>
+    
     </div>
   </div>
   </Layout>
@@ -137,7 +125,7 @@ export default {
         },
         {
           id: 2,
-          imgsrc: require('../assets/images/2.jpg')
+          imgsrc: require('../assets/images/3.jpg')
         },
         {
           id: 3,
@@ -145,7 +133,7 @@ export default {
         },
         {
           id: 4,
-          imgsrc: require('../assets/images/4.jpg')
+          imgsrc: require('../assets/images/1.jpg')
         }
       ],
       swiperOption: {
@@ -157,7 +145,7 @@ export default {
           delay: 1500,
           stopOnLastSlide: false,
           /* 触摸滑动后是否继续轮播 */
-          disableOnInteraction: false
+          disableOnInteraction: true
         },
         // 滑动速度
         speed: 800,
@@ -187,6 +175,9 @@ export default {
 }
 </script>
 <style  scoped >
+a:hover {
+  text-decoration: none;
+}
 .container_1 {
   display: flex;
   justify-content: space-between;
@@ -196,8 +187,32 @@ export default {
   width: 200px;
 }
 .side_Right {
-  background-color: red;
-  width: 400px;
+  /* background-color: red; */
+  /* display: flex; */
+  position: relative;
+  width: 300px;
+  /* padding: 20px; */
+
+/* float: left; */
+  /* opacity: 0.3 */
+  /* font-size: 20px; */
+}
+.side_Right div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('../assets/images/2.jpg');
+  background-size:cover;
+  opacity: 0.5
+}
+.side_Right ul {
+  position: absolute;
+}
+.side_Right li {
+  width: 100px;
+  opacity: 11;
+  margin: 10px 0;
+  color: rgb(51, 50, 50);
 }
 .banner {
   display: flex;
@@ -243,14 +258,53 @@ export default {
       height: 100%;
     }
 
-
+.el-card__body {
+  padding: 0!important;
+}
 .newArticl {
   display: flex;
   justify-content: space-around;
 }
 .el-card {
-  width: 250px;
-  height: 150px;
+  width: 300px;
+  height: 270px;
+}
+
+/* newMo 模玩模块*/
+.Modu {
+  width: 100%;
+}
+.newMo {
+  display: flex;
+  width: 100%;
+  /* height: 300px; */
+  /* justify-content: space-around; */
+  justify-content: space-between;
+}
+.newMo p {
+  margin: 5px 0;
+}
+.newMo img {
+  width: 100%;
+}
+
+.M_title {
+  font-size: 20px;
+  /* font-weight: 700; */
+  height: 32px;
+  /* background-color: red; */
+  line-height: 32px;
+}
+.M_sapn span{
+  color: #fff;
+  font-size: 16px;
+  margin-right: 8px;
+  border-radius:25%;
+  border: 1px solid rgb(207, 44, 44);
+  background-color: rgb(226, 63, 63);
+}
+.M_time {
+  font-size: 16px;
 }
 </style>
 

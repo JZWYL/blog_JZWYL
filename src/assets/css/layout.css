@@ -2,11 +2,12 @@ body {
     font-size: 20px;
     color: #212529;
     font-family: 'Lora', 'Times New Roman', serif;
+    /* background: url('../images/bg.jpg') no-repeat; */
+    /* background-size: cover; */
+    /* background-color: rgb(214, 202, 202); */
   }
 
-  li {
-    list-style: none;
-  }
+
   
   p {
     line-height: 1.5;

@@ -23,9 +23,9 @@
       <!-- Post Content -->
       <article>
             <div class="container">
+                <!-- <div>{{$page.post.content}}</div> -->
             <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto" v-html="mdToHtml($page.post.content)">
-            
+                <div class="post col-lg-8 col-md-10 mx-auto" v-html="mdToHtml($page.post.content)">
                 </div>
             </div>
             </div>
@@ -61,5 +61,10 @@ export default {
 </script>
 
 <style scoped>
-
+li {
+    list-style:outside !important;
+}
+.post {
+    background-color: rgb(241, 178, 178);
+}
 </style>

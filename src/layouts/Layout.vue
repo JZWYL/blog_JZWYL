@@ -69,6 +69,12 @@
 
 
 <style scoped>
+
+main {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
 header {
     width: 100%;
     position: fixed;
@@ -98,7 +104,7 @@ a {
     flex: 1;
     font-size: 30px;
     line-height: 60px;
-    padding-left: 15%;
+    padding-left: 12%;
 
 }
 .navRight {
@@ -110,7 +116,7 @@ a {
 .navRight-ul {
     display: flex;
     justify-content: flex-end;
-    padding-right: 20%;
+    padding-right: 16%;
 }
 .navRight-li {
     padding: 0 20px;
